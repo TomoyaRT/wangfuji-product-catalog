@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { CATEGORIES } from '../data/products'
-import { HistoryEntry, initHistory, addHistoryEntry } from '../utils/localStorage'
+import type { HistoryEntry } from '../utils/localStorage'
+import { initHistory, addHistoryEntry } from '../utils/localStorage'
 import { copyToClipboard } from '../utils/clipboard'
 
 const ITEM_NAME: Map<number, string> = new Map(

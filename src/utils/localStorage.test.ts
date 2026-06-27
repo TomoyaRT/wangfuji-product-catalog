@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import { initHistory, addHistoryEntry, HistoryEntry } from './localStorage'
+import type { HistoryEntry } from './localStorage'
+import { initHistory, addHistoryEntry } from './localStorage'
 
 beforeEach(() => localStorage.clear())
 
