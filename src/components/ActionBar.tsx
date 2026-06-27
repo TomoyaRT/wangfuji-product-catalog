@@ -1,10 +1,6 @@
 import { useStore } from '../store/useStore'
 
-interface Props {
-  onFinalize: () => void
-}
-
-export default function ActionBar({ onFinalize }: Props) {
+export default function ActionBar() {
   const isAllExpanded = useStore((s) => s.isAllExpanded)
   const toggleExpandAll = useStore((s) => s.toggleExpandAll)
   const openHistoryModal = useStore((s) => s.openHistoryModal)
@@ -20,12 +16,6 @@ export default function ActionBar({ onFinalize }: Props) {
         className="flex-1 py-3 text-sm text-espresso font-medium border-r border-muted"
       >
         {isAllExpanded ? '收合' : '展開'}
-      </button>
-      <button
-        onClick={onFinalize}
-        className="flex-1 py-3 text-sm font-bold text-paper bg-amber border-r border-muted"
-      >
-        完成
       </button>
       <button
         onClick={openHistoryModal}

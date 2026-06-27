@@ -13,7 +13,7 @@ const OutputArea = forwardRef<HTMLDivElement>((_, ref) => {
         <textarea
           value={textareaContent}
           onChange={(e) => setTextareaContent(e.target.value)}
-          placeholder="點擊「完成」後，結果會顯示在這裡"
+          placeholder="點擊「完成並複製」後，結果會顯示在這裡"
           rows={4}
           className="w-full bg-transparent font-mono text-sm text-espresso resize-none focus:outline-none placeholder:text-espresso/30"
         />
@@ -23,7 +23,7 @@ const OutputArea = forwardRef<HTMLDivElement>((_, ref) => {
         disabled={!textareaContent}
         className="mt-3 w-full py-2 rounded-lg border border-plum text-plum text-sm font-medium disabled:opacity-30"
       >
-        複製
+        客製化複製
       </button>
     </div>
   )

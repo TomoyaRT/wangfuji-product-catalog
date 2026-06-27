@@ -22,19 +22,23 @@ export default function App() {
     }
   }, [shouldScrollToOutput, clearScrollFlag])
 
-  const handleFinalize = () => {
-    finalize()
-  }
-
   return (
     <div className="flex flex-col min-h-screen bg-paper">
       <FeedbackToast />
       <Header />
       <main className="flex-1 pb-16">
         <CategoryList />
+        <div className="px-4 pt-4">
+          <button
+            onClick={() => finalize()}
+            className="w-full py-3 rounded-lg bg-amber text-paper text-sm font-bold"
+          >
+            完成並複製
+          </button>
+        </div>
         <OutputArea ref={outputAreaRef} />
       </main>
-      <ActionBar onFinalize={handleFinalize} />
+      <ActionBar />
       <HistoryModal />
     </div>
   )
