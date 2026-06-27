@@ -45,7 +45,7 @@ export default function HistoryModal() {
                   className="w-full text-left px-4 py-3 border-b border-muted"
                 >
                   <p className="text-xs text-espresso/50 mb-0.5">{entry.createdAt}</p>
-                  <p className="text-sm text-espresso font-mono truncate">{entry.text}</p>
+                  <p className="text-sm text-espresso font-mono">{entry.text.length > 20 ? `${entry.text.slice(0, 20)}…` : entry.text}</p>
                 </button>
               </li>
             ))}
