@@ -1,32 +1,104 @@
-# React + TypeScript + Vite
+# 汪福記商品選取工具
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+一個讓您快速整理訂貨清單的手機工具。點選需要的商品項目，系統會自動幫您整理成清單並複製，方便直接貼到 Line 或任何地方。
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 如何開始使用
 
-## React Compiler
+用手機瀏覽器（建議使用 iPhone Safari）開啟以下網址：
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```
+https://TomoyaRT.github.io/wangfuji-product-catalog/
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+不需要下載任何 App，直接用瀏覽器就可以使用。
+
+---
+
+## 使用步驟
+
+### 第一步：展開種類
+
+畫面下方有四個按鈕，點擊「**展開**」會一次展開所有商品種類，讓您看到所有可選的項目。
+
+如果只想看某個種類，也可以直接點擊種類名稱（例如「梅子類」）來展開或收合。
+
+### 第二步：點選商品
+
+展開種類後，您會看到所有的商品名稱以小方塊的方式排列。
+
+- 點一下某個商品 → 選取（方塊變成深紅色）
+- 再點一下 → 取消選取（方塊恢復原本樣式）
+
+可以同時選取多個種類的多個商品，沒有數量限制。
+
+### 第三步：完成並複製
+
+選好所有需要的商品後，點擊「**完成並複製**」按鈕。
+
+系統會自動：
+1. 將您選取的所有商品整理成清單（例如：`甘宋梅、紅心芭樂乾、鳳梨芯`）
+2. 自動複製到剪貼簿
+3. 畫面頂端出現「已複製所有商品項目」的提示訊息
+4. 畫面自動捲到下方的「輸出結果」區域，讓您確認內容
+
+複製完成後，直接開啟 Line 或其他 App，長按貼上即可。
+
+### 第四步：查看與修改結果
+
+畫面下方的「輸出結果」區域會顯示您複製的內容。
+
+如果需要微調，可以直接在這個區域點擊並修改文字。修改完成後，點擊「**客製化複製**」按鈕，就會複製您修改後的版本。
+
+---
+
+## 功能說明
+
+### 展開 / 收合
+
+點擊畫面底部的「**展開**」按鈕，會一次展開所有種類。此時按鈕文案會變成「**收合**」，再次點擊即可一次收合所有種類。
+
+### 歷史紀錄
+
+每次點擊「完成並複製」，系統會自動儲存這次的清單（最多保留 5 筆，超過會自動刪除最舊的紀錄）。
+
+點擊底部的「**歷史紀錄**」按鈕，可以查看過去整理的清單。點擊某一筆紀錄，會自動還原當時的選取狀態並複製該筆內容，方便重複使用相似的訂單。
+
+### 清除
+
+點擊底部的「**清除**」按鈕，會清除所有已選取的商品以及輸出區域的內容，讓您從頭開始重新選取。
+
+---
+
+## 常見問題
+
+**Q：點擊「完成並複製」後沒有出現提示，代表沒有複製成功嗎？**
+
+A：部分手機瀏覽器在第一次使用時可能會詢問是否允許複製，請允許即可。如果沒有看到提示訊息，可以試著在「輸出結果」區域點擊「客製化複製」按鈕手動複製。
+
+**Q：歷史紀錄只有 5 筆，舊的紀錄怎麼辦？**
+
+A：超過 5 筆後，最舊的一筆會自動被刪除。如果有需要保留的清單，建議先貼到 Line 或記事本中保存。
+
+**Q：關閉瀏覽器後，歷史紀錄還在嗎？**
+
+A：還在。歷史紀錄存在您手機的瀏覽器裡，只要不清除瀏覽器資料，就不會消失。
+
+---
+
+## 商品種類
+
+| 種類 | 項目數 |
+|------|--------|
+| 梅子類 | 26 項 |
+| 果、干類 | 47 項 |
+| 李、棗類 | 6 項 |
+| 橄欖、仙楂類 | 10 項 |（含仙楂梅，共 11 項）
+| 魚類 | 21 項 |
+| 其他 | 7 項 |
+| 豆干類 | 6 項 |
+| 糖果類 | 16 項 |
+| 未分類 | 4 項 |
+
+共 **143 個商品項目**。
