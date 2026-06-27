@@ -48,7 +48,7 @@ export const useStore = create<StoreState>((set, get) => {
   const showFeedback = () => {
     if (feedbackTimer) clearTimeout(feedbackTimer)
     set({ feedbackMessage: '已複製所有商品項目' })
-    feedbackTimer = setTimeout(() => set({ feedbackMessage: null }), 2000)
+    feedbackTimer = setTimeout(() => set({ feedbackMessage: null }), 1500)
   }
 
   return {

@@ -9,7 +9,7 @@ export default function FeedbackToast() {
     <div
       role="status"
       aria-live="polite"
-      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-plum text-paper text-sm px-4 py-2 rounded-full shadow-lg"
+      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-espresso text-paper text-sm px-4 py-2 rounded-full shadow-lg"
     >
       {feedbackMessage}
     </div>
